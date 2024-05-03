@@ -12,7 +12,6 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws SQLException {
         try (Connection connection = Util.getConnection()
-             //Statement stat = connection.createStatement()
         )
         {
             UserDao userDao = new UserDaoJDBCImpl(connection);
