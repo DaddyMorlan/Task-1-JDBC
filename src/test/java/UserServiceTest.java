@@ -16,7 +16,7 @@ public class UserServiceTest {
 
     @Test
     public void dropUsersTable() {
-        try {
+        try  {
             userService.dropUsersTable();
             userService.dropUsersTable();
         } catch (Exception e) {

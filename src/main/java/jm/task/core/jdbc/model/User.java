@@ -7,25 +7,29 @@ import javax.persistence.Table;
 @Table
 public class User {
     @Id
-    private Long id;
+    private  Long id;
 
     @Column
-    private String name;
+    private  String name;
 
     @Column
-    private String lastName;
+    private  String lastName;
 
     @Column
-    private Byte age;
+    private  Byte age;
 
     public User() {
 
     }
 
-    public User(String name, String lastName, Byte age) {
+    public User(long id, String name, String lastName, Byte age) {
+        this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.age = age;
+    }
+
+    public User(String name, String lastName, byte age) {
     }
 
     public Long getId() {
@@ -36,7 +40,7 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
+    public  String getName() {
         return name;
     }
 
@@ -44,7 +48,7 @@ public class User {
         this.name = name;
     }
 
-    public String getLastName() {
+    public  String getLastName() {
         return lastName;
     }
 
@@ -52,11 +56,21 @@ public class User {
         this.lastName = lastName;
     }
 
-    public Byte getAge() {
+    public  Byte getAge() {
         return age;
     }
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
